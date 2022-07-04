@@ -92,7 +92,7 @@ function createChat(message, username, color) {
 }
 
 chatInput.addEventListener("keydown", function (event) {
-  if (event.key == "Enter") {
+  if (event.key == "Enter" && chatInput.value.replace(/\s/g, "").length > 0) {
     socket.publish({ s: roomCode, t: "c" }, { u: username, c: color, m: chatInput.value });
     createChat(chatInput.value, username, color);
     chatInput.value = "";
