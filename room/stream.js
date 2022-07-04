@@ -65,7 +65,7 @@ socket.subscribe({ s: roomCode, t: "f" }, function (d) {
   if (d.f) {
     stream.src = decode(d.f);
   }
-  if (startStreamButton) {
+  if (startStreamCameraButton) {
     startStreamCameraButton.remove();
     startStreamScreenButton.remove();
   }
