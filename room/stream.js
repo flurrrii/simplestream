@@ -56,7 +56,7 @@ function startStream() {
 
       socket.publish({ s: roomCode, t: "f" }, { f: encode(frame), u: username });
     }
-  }, 64);
+  }, 128);
   startStreamCameraButton.remove();
   startStreamScreenButton.remove();
 }
