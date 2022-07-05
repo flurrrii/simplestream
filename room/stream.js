@@ -4,6 +4,7 @@ const socket = new SimpleSocket({
 });
 
 const roomCode = location.href.slice(location.href.indexOf("#") + 1);
+
 let username = localStorage.getItem("username");
 if (!username) {
   username = prompt("Enter Username");
