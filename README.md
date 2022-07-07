@@ -1,1 +1,2 @@
 # simplestream
+https://simplestream.gq
