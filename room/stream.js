@@ -49,13 +49,11 @@ function startStream() {
   document.title = "Brodcasting Stream | " + roomCode;
   streamUsername.innerText = username;
   setInterval(function () {
-    if (!document.hidden) {
       data.getContext('2d').drawImage(output, 0, 0, data.width, data.height);
       let frame = data.toDataURL('image/jpeg', compression);
       stream.src = frame;
 
       socket.publish({ s: roomCode, t: "f" }, { f: encode(frame), u: username });
-    }
   }, 128);
   startStreamCameraButton.remove();
   startStreamScreenButton.remove();
